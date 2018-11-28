@@ -1,0 +1,22 @@
+
+while True: 
+    st_st = input("Start a game of rock, paper, scissors? Y/N: ")
+    if st_st.lower() == 'n':
+        break
+    elif st_st.lower() == 'y':
+        plr_one = input("Player one: Rock, Paper, or Scissors?")
+        plr_two = input("Player two: Rock, Paper, or Scissors?")
+        
+        if plr_one == plr_two:
+            print("Shoot!")
+            continue
+        elif plr_one == 'rock' and plr_two == 'scissors':
+            winner = plr_one
+        elif plr_two == 'rock' and plr_one == 'scissors':
+            winner = plr_two
+        elif plr_one == 'scissors' and plr_two == 'paper':
+            winner = plr_one
+    else:
+        print("Invalid entry")
+        continue
+    print("The winner is: " + winner + " Congratulations!")
