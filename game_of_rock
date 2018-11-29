@@ -1,4 +1,3 @@
-
 while True: 
     st_st = input("Start a game of rock, paper, scissors? Y/N: ")
     if st_st.lower() == 'n':
@@ -16,6 +15,16 @@ while True:
             winner = plr_two
         elif plr_one == 'scissors' and plr_two == 'paper':
             winner = plr_one
+        elif plr_two == 'scissors' and plr_two == 'paper':
+            winner = plr_two
+        elif plr_one == 'paper' and plr_two == 'rock':
+            winner = plr_one
+        elif plr_two == 'paper' and plr_one == 'rock':
+            winner = plr_two
+        elif plr_one == 'rock' and plr_two == 'scissors':
+            winner = plr_one
+        elif plr_two == 'rock' and plr_one == 'scissors': 
+            winner = plr_two
     else:
         print("Invalid entry")
         continue
