@@ -1,30 +1,43 @@
+import getpass
 while True: 
     st_st = input("Start a game of rock, paper, scissors? Y/N: ")
     if st_st.lower() == 'n':
         break
     elif st_st.lower() == 'y':
-        plr_one = input("Player one: Rock, Paper, or Scissors?")
-        plr_two = input("Player two: Rock, Paper, or Scissors?")
-        
-        if plr_one == plr_two:
+        k = getpass.getpass("Player one: Rock, Paper, or Scissors?")
+        l = getpass.getpass("Plyer two: Rock, Paper, or Scissors?")
+        p_one = {
+            "User" : "Player One", 
+            "Choice": k
+            }
+        p_two = {
+            "User": "Player Two", 
+            "Choice": l
+            }
+        cpo = p_one['Choice']
+        cpt = p_two['Choice']
+        upo = p_one['User']
+        upt = p_two['User']
+                
+        if cpo == cpt:
             print("Shoot!")
             continue
-        elif plr_one == 'rock' and plr_two == 'scissors':
-            winner = plr_one
-        elif plr_two == 'rock' and plr_one == 'scissors':
-            winner = plr_two
-        elif plr_one == 'scissors' and plr_two == 'paper':
-            winner = plr_one
-        elif plr_two == 'scissors' and plr_two == 'paper':
-            winner = plr_two
-        elif plr_one == 'paper' and plr_two == 'rock':
-            winner = plr_one
-        elif plr_two == 'paper' and plr_one == 'rock':
-            winner = plr_two
-        elif plr_one == 'rock' and plr_two == 'scissors':
-            winner = plr_one
-        elif plr_two == 'rock' and plr_one == 'scissors': 
-            winner = plr_two
+        elif cpo == 'rock' and cpt == 'scissors':
+            winner = upo
+        elif cpo == 'rock' and cpt == 'scissors':
+            winner = upt
+        elif cpo == 'scissors' and cpt == 'paper':
+            winner = upo
+        elif cpt == 'scissors' and cpt == 'paper':
+            winner = upt
+        elif cpo == 'paper' and cpt == 'rock':
+            winner = upo
+        elif cpt == 'paper' and cpo == 'rock':
+            winner = upt
+        elif cpo == 'rock' and cpt == 'scissors':
+            winner = upo
+        elif cpt == 'rock' and cpo == 'scissors': 
+            winner = upt
     else:
         print("Invalid entry")
         continue
